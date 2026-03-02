@@ -34,7 +34,7 @@ Bash
 Clone the Repository:
 
 Bash
-git clone https://github.com/your-username/vault-pro.git
+git clone https://github.com/imsuvajitghosh/vault-pro.git
 Launch: Open index.html in any modern web browser.
 
 Authentication:
