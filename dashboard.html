@@ -20,19 +20,12 @@
         </div>
 
         <div class="flex gap-4">
-            <button onclick="VaultCore.Explorer.renderPlaces()" class="app-btn text-cyan-400">📂 ALL TOURS</button>
             <a href="upload.html" class="app-btn text-blue-400 font-bold">📤 UPLOAD</a>
             <button onclick="sessionStorage.clear(); location.href='index.html'" class="app-btn text-red-500 font-bold">🔒 LOCK</button>
         </div>
     </nav>
 
-    <div class="flex justify-between items-center mb-10">
-        <div id="breadcrumb" class="text-[10px] font-mono tracking-widest uppercase flex items-center gap-3 text-slate-500 overflow-x-auto whitespace-nowrap"></div>
-        <div id="folderActions" class="hidden flex gap-4 animate__animated animate__fadeIn">
-             <button onclick="VaultCore.Explorer.shareFolder()" class="text-[10px] font-bold text-blue-400 border border-blue-400/30 px-4 py-2 rounded-full hover:bg-blue-400 hover:text-white transition">SHARE FOLDER</button>
-             <button onclick="VaultCore.Explorer.downloadFolder()" class="text-[10px] font-bold text-green-400 border border-green-400/30 px-4 py-2 rounded-full hover:bg-green-400 hover:text-white transition">DOWNLOAD ALL</button>
-        </div>
-    </div>
+    <div id="breadcrumb" class="mb-10 text-[10px] font-mono tracking-widest uppercase flex items-center gap-3 text-slate-500 overflow-x-auto whitespace-nowrap pb-2"></div>
 
     <div id="explorerGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-10"></div>
 
