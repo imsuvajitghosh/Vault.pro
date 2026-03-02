@@ -22,34 +22,34 @@ Logic: Vanilla JavaScript (ES6+).
 Storage: Browser localStorage for persistent data and sessionStorage for auth states.
 
 📂 Project Structure
-Bash
-├── index.html       # PIN-entry login page
-├── dashboard.html   # Main media explorer grid
-├── upload.html      # Image processor and metadata form
-├── css/
-│   └── main.css     # Custom glassmorphism styles
-└── js/
-    └── vault-logic.js # logic for rendering stored media
-⚙️ Setup & Usage
+        Bash
+        ├── index.html       # PIN-entry login page
+        ├── dashboard.html   # Main media explorer grid
+        ├── upload.html      # Image processor and metadata form
+        ├── css/
+        │   └── main.css     # Custom glassmorphism styles
+        └── js/
+            └── vault-logic.js # logic for rendering stored media
+        ⚙️ Setup & Usage
 Clone the Repository:
 
 Bash
-git clone https://github.com/imsuvajitghosh/vault-pro.git
+git clone [https://github.com/imsuvajitghosh/vault-pro.git](https://github.com/imsuvajitghosh/Vault.pro)
 Launch: Open index.html in any modern web browser.
 
 Authentication:
 
-Default PIN: 00110011.
+        Default PIN: 00110011.
 
-Click OK to enter the dashboard.
+        Click OK to enter the dashboard.
 
 Uploading:
 
-Click UPLOAD FILE on the dashboard.
+    Click UPLOAD FILE on the dashboard.
+    
+    Enter details (Place, Person, Category) and select your image files.
 
-Enter details (Place, Person, Category) and select your image files.
-
-Click Process to Vault to save.
+    Click Process to Vault to save.
 
 🛡️ Privacy Note
 This application utilizes Local Storage. No data is sent to a server; all images and information remain strictly on your local machine. Clearing your browser's site data will remove all vaulted items.
