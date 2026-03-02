@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Upload | Pro-Vault Processor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="p-10">
+    <div id="alert-stack" class="fixed top-5 right-5 space-y-3 z-[100]"></div>
+    <div class="max-w-2xl mx-auto glass p-10 rounded-[2.5rem]">
+        <h2 class="text-3xl font-black mb-8 text-white italic">UPLOAD PROCESSOR</h2>
+        
+        <div class="space-y-4 mb-8">
+            <input type="text" id="p_place" placeholder="Tour Place (e.g. London)" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-4 text-white outline-none focus:border-blue-500">
+            <input type="text" id="p_person" placeholder="Person Name (e.g. Alex)" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-4 text-white outline-none focus:border-blue-500">
+            <select id="p_cat" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-4 text-white outline-none">
+                <option value="Personal">Personal Wise</option>
+                <option value="Group">Group Photo</option>
+            </select>
+        </div>
+
+        <div class="border-2 border-dashed border-slate-700 rounded-2xl p-12 text-center mb-8 hover:border-blue-500 transition cursor-pointer" onclick="document.getElementById('f_input').click()">
+            <div class="text-5xl mb-4">📤</div>
+            <p class="text-slate-400">Select images to encrypt and upload</p>
+            <input type="file" id="f_input" class="hidden" multiple accept="image/*">
+        </div>
+
+        <button onclick="VaultCore.Data.processUpload()" class="w-full bg-blue-600 hover:bg-blue-500 py-4 rounded-xl font-bold text-white shadow-lg transition shadow-blue-900/20">
+            SECURELY PROCESS TO VAULT
+        </button>
+    </div>
+    <script src="js/ui-engine.js"></script>
+    <script src="js/vault-core.js"></script>
+</body>
+</html>

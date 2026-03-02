@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vault | Encrypted Entrance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="flex items-center justify-center p-6 min-h-screen">
+    <div id="alert-stack" class="fixed top-5 right-5 space-y-3 z-[100]"></div>
+
+    <div class="glass p-12 rounded-[3.5rem] w-full max-w-sm text-center animate__animated animate__zoomIn">
+        <div class="mb-10">
+            <h2 class="text-4xl font-black text-white italic tracking-tighter">VAULT<span class="text-blue-500">.PRO</span></h2>
+            <p class="text-slate-500 text-[10px] tracking-[0.5em] mt-2 font-bold uppercase">Authorization Layer 8</p>
+        </div>
+        
+        <div class="grid grid-cols-4 gap-4 justify-center mb-12" id="pinDisplay">
+            <div class="pin-dot"></div><div class="pin-dot"></div><div class="pin-dot"></div><div class="pin-dot"></div>
+            <div class="pin-dot"></div><div class="pin-dot"></div><div class="pin-dot"></div><div class="pin-dot"></div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4">
+            <script>
+                for(let i=1; i<=9; i++) document.write(`<button onclick="VaultCore.Auth.press(${i})" class="h-16 rounded-2xl bg-slate-800/40 text-white text-2xl font-bold hover:bg-blue-600 transition-all border border-slate-700 active:scale-90">${i}</button>`);
+            </script>
+            <button onclick="VaultCore.Auth.clear()" class="h-16 rounded-2xl bg-red-900/20 text-red-500 font-bold border border-red-900/30">C</button>
+            <button onclick="VaultCore.Auth.press(0)" class="h-16 rounded-2xl bg-slate-800/40 text-white text-2xl font-bold border border-slate-700">0</button>
+            <button onclick="VaultCore.Auth.verify()" class="h-16 rounded-2xl bg-green-900/20 text-green-500 font-bold border border-green-900/30">OK</button>
+        </div>
+    </div>
+
+    <script src="js/ui-engine.js"></script>
+    <script src="js/vault-core.js"></script>
+</body>
+</html>
