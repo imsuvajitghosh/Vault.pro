@@ -34,7 +34,7 @@ Storage: Browser localStorage for persistent data and sessionStorage for auth st
 Clone the Repository:
 
 Bash
-git clone [https://github.com/imsuvajitghosh/vault-pro]
+git clone
 (https://github.com/CraftedBySuvajit/Vault.pro)
 Launch: Open index.html in any modern web browser.
 
